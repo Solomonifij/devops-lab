@@ -4,9 +4,6 @@
 ![AWS Architecture](./architecture.png)
 
 ## Architecture Overview
-...
-
-## Architecture Overview
 
 ```
 Internet
