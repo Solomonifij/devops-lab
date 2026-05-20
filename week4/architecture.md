@@ -6,21 +6,25 @@
 ## Architecture Overview
 ...
 
+## Architecture Overview
+
+```
 Internet
-↓
+    ↓
 Internet Gateway (3mtt-devops-igw)
-↓
+    ↓
 Application Load Balancer (port 80)
-↓
+    ↓
 Target Group (3mtt-devops-tg)
-↙        ↘
-web-server-1  web-server-2
-(nginx)       (nginx)
-Public Sub 1  Public Sub 2
-10.0.1.0/24   10.0.2.0/24
-|               |
-└── Auto Scaling Group ──┘
-min=2  desired=2  max=4
+    ↙               ↘
+web-server-1      web-server-2
+(nginx)           (nginx)
+Public Sub 1      Public Sub 2
+10.0.1.0/24       10.0.2.0/24
+    |                   |
+    └─── Auto Scaling Group ───┘
+          min=2  desired=2  max=4
+```
 
 
 ---
